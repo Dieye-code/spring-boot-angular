@@ -1,0 +1,31 @@
+<agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom">
+  <agm-marker *ngFor="let localite of locals" [latitude]=localite.latitude [longitude]=localite.longitude
+    title={{localite.name}}></agm-marker>
+</agm-map>
+
+
+<div class="card col-md-6 offset-md-3">
+  <div class="card-header bg-primary text-white">Ajout Localité</div>
+  <div class="card-body">
+    <form (ngSubmit)="saveLocalite()" >
+      <div class="form-group">
+        <label class="control-label">Nom de la Localite</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="loc.name">
+      </div>
+      <div class="form-group">
+        <label  class="control-label">Latitude</label>
+        <input type="number" class="form-control" name="latitude" [(ngModel)]="loc.latitude">
+      </div>
+    
+      <div class="form-group">
+        <label  class="control-label">Longitude</label>
+        <input type="number" class="form-control" name="longitude" [(ngModel)]="loc.longitude">
+      </div>
+      <div class="form-group">
+        <input type="submit" name="ajouter" value="Ajouter" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+  
+  
+</div>
