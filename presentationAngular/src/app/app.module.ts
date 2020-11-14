@@ -17,7 +17,7 @@ import { LocaliteComponent } from './component/localite/localite.component';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDS7q7I_aGv39tuz6A6c8CeXkB18P9m0Yc'
+      apiKey: 'your Key'
     }),
     HttpClientModule,
     FormsModule
